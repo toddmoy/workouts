@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>atom/button/close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="atom/button/close" fill="#FFFFFF">
+            <path d="M20.0918831,18.1629509 L16.5563492,14.627417 L13.7279221,17.4558441 L17.263456,20.991378 L13.7279221,24.5269119 L16.5563492,27.3553391 L20.0918831,23.8198052 L23.627417,27.3553391 L26.4558441,24.5269119 L22.9203102,20.991378 L26.4558441,17.4558441 L23.627417,14.627417 L20.0918831,18.1629509 Z M0.284271247,20.2842712 C0.284271247,9.23857625 9.23614761,0.284271247 20.2842712,0.284271247 C31.3299662,0.284271247 40.2842712,9.23614761 40.2842712,20.2842712 C40.2842712,31.3299662 31.3323949,40.2842712 20.2842712,40.2842712 C9.23857625,40.2842712 0.284271247,31.3323949 0.284271247,20.2842712 Z" id="Combined-Shape" transform="translate(20.284271, 20.284271) rotate(-270.000000) translate(-20.284271, -20.284271) "></path>
+        </g>
+    </g>
+</svg>
