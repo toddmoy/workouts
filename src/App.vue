@@ -93,13 +93,13 @@
   }
 
   .btn {
-    background-color: black;
+    align-self: center;
+    background-color: white;
     border-radius: 100px;
-    color: white;
+    color: black;
     display: inline-block;
     padding: calc(20px + 1vw) calc(40px + 1vw);
     text-decoration: none;
-    text-transform: uppercase;
     transition: all 0.1s ease-out;
   }
 
@@ -114,9 +114,11 @@
   .icon-btn {
     opacity: 0.5;
     transition: all 0.1s ease-out;
-    width: 40px;
     display: block;
-    font-size: 18px;
+  }
+
+  .icon-btn img {
+    width: 8vmin;
   }
 
   .icon-btn:hover {
@@ -131,6 +133,7 @@
   .fade-enter-active, .fade-leave-active {
     transition: opacity .2s ease-in-out;
   }
+
   .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
     opacity: 0;
   }

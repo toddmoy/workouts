@@ -4,7 +4,7 @@
     <div class="carousel">
       <div v-for="workout in workouts" class="carousel-cell workout" :style="{backgroundColor: workout.color}">
         <p>{{ workout.name }}</p>
-        <router-link :to="workout.id.toString()" class="btn">Go</router-link>
+        <router-link :to="workout.id.toString()" class="btn" :style="{color: workout.color}">Go</router-link>
       </div>
     </div>
   </div>
@@ -52,20 +52,13 @@
     color: #fff;
     text-decoration: none;
     text-align: center;
-    width: calc(264px + 10vw);
-    height: calc(264px + 10vw);
+    width: calc(264px + 30vw);
+    height: calc(264px + 30vh);
     padding: calc(40px + 2vw);
     margin: calc(16px + 0.5vw);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    z-indeX: 1;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .workout:hover {
-    z-index: 999;
-    transform: translateY(-16px)
+    justify-content: space-around;
   }
 
   .flickity-page-dots {
@@ -76,7 +69,14 @@
 
   .flickity-enabled {
     outline-style: none;
+  }
+
+  .flickity-viewport {
     cursor: grab;
+  }
+
+  .flickity-viewport.is-pointer-down {
+    cursor: grabbing;
   }
 
   .flickity-page-dots .dot {
