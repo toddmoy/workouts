@@ -8,6 +8,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var path = require('path')
+var manifestPlugin = require('pwa-manifest-webpack-plugin')
 
 var env = config.build.env
 
@@ -90,7 +92,18 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new manifestPlugin({
+      name: 'Workouts',
+      description: 'A climbing workout app',
+      display: 'fullscreen',
+      orientation: 'portrait',
+      icon: {
+        src: path.resolve('src/assets/icons/icon-app.png'),
+        sizes: [200]
+      },
+      background_color: '#011627',
+    })
   ]
 })
 

@@ -52,8 +52,8 @@
     color: #fff;
     text-decoration: none;
     text-align: center;
-    width: calc(264px + 30vw);
-    height: calc(264px + 30vh);
+    width: calc(200px + 20vw);
+    height: calc(100px + 30vh);
     padding: calc(40px + 2vw);
     margin: calc(16px + 0.5vw);
     display: flex;

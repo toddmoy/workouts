@@ -5,6 +5,8 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+var path = require('path')
+var manifestPlugin = require('pwa-manifest-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -30,6 +32,17 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    new FriendlyErrorsPlugin()
+    new FriendlyErrorsPlugin(),
+    new manifestPlugin({
+      name: 'Workouts',
+      description: 'A climbing workout app',
+      display: 'fullscreen',
+      orientation: 'portrait',
+      icon: {
+        src: path.resolve('src/assets/icons/icon-app.png'),
+        sizes: [200]
+      },
+      background_color: '#011627',
+    })
   ]
 })

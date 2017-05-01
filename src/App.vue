@@ -27,6 +27,7 @@
   body {
     font-size: calc(1em + 1vw);
     height: 100%;
+    font-weight: 700;
   }
 
   .visually-hidden {
