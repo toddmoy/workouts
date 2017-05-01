@@ -3,7 +3,7 @@
     <h1>Workouts</h1>
     <div class="carousel">
       <div v-for="workout in workouts" class="carousel-cell workout" :style="{backgroundColor: workout.color}">
-        <p>{{ workout.name }}</p>
+        <h2>{{ workout.name }}</h2>
         <router-link :to="workout.id.toString()" class="btn" :style="{color: workout.color}">Go</router-link>
       </div>
     </div>
@@ -80,11 +80,11 @@
   }
 
   .flickity-page-dots .dot {
-    border: solid rgba(255, 255, 255, 0.5) 1px;
-    border-radius: 10px;
-    width: 12px;
-    height: 12px;
-    margin: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    width: calc(12px + 1vh);
+    height: calc(12px + 1vh);
+    margin: calc(4px + 0.5vw);
   }
 
   .flickity-page-dots .is-selected {
