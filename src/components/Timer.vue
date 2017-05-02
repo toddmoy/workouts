@@ -64,13 +64,23 @@
     data: function(){
       return ({
         completedSteps: 0,
+        currentExercise: null,
         currentTime: 7,
         isPaused: false,
-        totalSteps: 7
+        totalSteps: 7,
+        workout: null,
       })
     },
 
     methods: {
+      loadData: function() {
+        this.workout = this.$store.state.workouts[this.id]
+      },
+
+      nextExercise: function() {},
+
+      prevExercise: function() {},
+
       togglePaused: function() {
         this.isPaused = !this.isPaused
       },
@@ -92,6 +102,10 @@
           this.completedSteps = 7 - this.currentTime
         }
       }
+    },
+
+    created() {
+      this.loadData()
     },
 
     mounted() {

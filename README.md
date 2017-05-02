@@ -1,6 +1,6 @@
-# workouts
+# Workouts
 
-> A Vue.js project
+A climbing training app built using Vue.js. 
 
 ## Build Setup
 

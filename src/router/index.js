@@ -11,6 +11,6 @@ export default new Router({
   routes: [
     { path: '/', component: Workouts },
     { path: '/:id', component: Workout, props: true },
-    { path: '/:id/go', component: Timer}
+    { path: '/:id/go', component: Timer, props: true }
   ]
 })
