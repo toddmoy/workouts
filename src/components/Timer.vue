@@ -1,3 +1,11 @@
+/**
+ * Timer.vue
+ *
+ * Displays a pausable countdown timer, along with exercise metadata.
+ * Implements vue-radial-progress.
+ */
+
+
 <template lang="html">
   <div class="cardinal-layout" style="color: #fff; background-color: #E2223B">
     <header class="header">
@@ -20,9 +28,7 @@
         startColor="#fff"
         stopColor="#fff"
         innerStrokeColor="rgba(255, 255, 255, 0.2)">
-        <p class="radial-progress-container__number">
-          {{ currentTime }}
-        </p>
+        <p class="radial-progress-container__number">{{ currentTime }}</p>
       </radial-progress-bar>
       <p>1 of 7</p>
     </main>
@@ -40,18 +46,20 @@
 </template>
 
 
+////////////////////////////////////////////////////////////////////////////////
+
+
 <script>
   import RadialProgressBar from 'vue-radial-progress/dist/vue-radial-progress.min.js'
 
   export default {
     name: 'timer',
 
-    mounted() {
-      window.setInterval(() => {
-        this.tick();
-      }, 1000)
-      window.addEventListener("keypress", this.handleKeypress, false);
+    components: {
+      RadialProgressBar
     },
+
+    props: ['id'],
 
     data: function(){
       return ({
@@ -60,10 +68,6 @@
         isPaused: false,
         totalSteps: 7
       })
-    },
-
-    components: {
-      RadialProgressBar
     },
 
     methods: {
@@ -88,9 +92,20 @@
           this.completedSteps = 7 - this.currentTime
         }
       }
+    },
+
+    mounted() {
+      window.setInterval(() => {
+        this.tick();
+      }, 1000)
+
+      window.addEventListener("keypress", this.handleKeypress, false);
     }
   }
 </script>
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 <style>

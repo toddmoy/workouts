@@ -1,14 +1,29 @@
+/**
+ * Workouts.vue
+ *
+ * Displays a list of workouts obtained from $store.
+ * Implements Flickity carousel.
+ */
+
+
 <template lang="html">
   <div class="workouts-layout">
     <h1>Workouts</h1>
     <div class="carousel">
-      <div v-for="workout in workouts" class="carousel-cell workout" :style="{backgroundColor: workout.color}">
+      <div v-for="workout in workouts"
+        class="carousel-cell workout"
+        :style="{backgroundColor: workout.color}">
         <h2>{{ workout.name }}</h2>
-        <router-link :to="workout.id.toString()" class="btn" :style="{color: workout.color}">Go</router-link>
+        <router-link :to="workout.id.toString()"
+          class="btn"
+          :style="{color: workout.color}">Go</router-link>
       </div>
     </div>
   </div>
 </template>
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 <script>
@@ -17,7 +32,9 @@
 
   export default {
     name: 'workouts',
+
     computed: mapState([ 'workouts' ]),
+
     mounted() {
       var flickity = new Flickity( '.carousel', {
         pageDots: true,
@@ -27,6 +44,9 @@
     }
   }
 </script>
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 <style>
