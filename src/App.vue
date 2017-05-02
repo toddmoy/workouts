@@ -7,11 +7,17 @@
 </template>
 
 
+////////////////////////////////////////////////////////////////////////////////
+
+
 <script>
   export default {
     name: 'app'
   }
 </script>
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 <style>
@@ -30,6 +36,12 @@
     font-weight: 700;
   }
 
+  #app {
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, sans-serif;
+    height: 100%;
+    background-color: #011627;
+  }
+
   .visually-hidden {
     border:0 !important;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -39,12 +51,6 @@
     padding:0 !important;
     position: absolute !important;
     width: 1px !important;
-  }
-
-  #app {
-    font-family: Montserrat, 'Helvetica Neue', Helvetica, sans-serif;
-    height: 100%;
-    background-color: #011627;
   }
 
   .cardinal-layout {
